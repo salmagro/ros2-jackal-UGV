@@ -2,12 +2,12 @@
 
 Instrucciones a seguir para el proyecto final.
 
-## Compilacion del workspace ros2-jackal-ugv
+## Compilación del workspace ros2-jackal-ugv
 
 1. Clona el repositorio `ros2-jackal-ugv` en el directorio fuente (`src`) de tu `ros2 workspace`.
 
 
-2. Tu directorio tendra la siguiente estructura.
+2. Tu directorio tendrá la siguiente estructura.
     ```shell
     ~/your-ros2-workspace/src/ros2-jackal-ugv$ tree -L 2
     .
@@ -36,7 +36,9 @@ Instrucciones a seguir para el proyecto final.
 
 4. Compila los nuevos paquetes.
 
-5. Actualiza el entorno via `set-ros`.
+    **Hint:** Puedes utilizar el siguiente argumento `--base-path src/ros2-jackal-ugv` junto con el comando de compilación.
+
+5. Actualiza el entorno vía `set-ros`.
 
 ## Launch file
 
@@ -70,7 +72,7 @@ Instrucciones a seguir para el proyecto final.
 
     1. Para visualizar los cambios en el URDF, es necesario detener el comando del paso 7 con `Ctrl + C` y volver a ejecutarlo.
 
-    2. **Consejo:** Revisa los colores definidos en la sección de materiales (`<material>`) del robot.
+    2. **Hint:** Revisa los colores definidos en la sección de materiales (`<material>`) del robot.
     ![Color corregido](assets/2025-04-30_00-06.png)
 
 ## Controla tu robot
@@ -89,14 +91,31 @@ Instrucciones a seguir para el proyecto final.
 
     2. Recuerda seleccionar la terminal donde se está ejecutando `teleop_twist_keyboard` para que los comandos tengan efecto.
 
-## Entregable
+## Entregables
 
-11. Comparte tu pantalla mostrando tu robot moviéndose:
-![Entregable](<assets/Peek 2025-05-17 00-00.gif>)
+11. Obtén el diagrama de árbol de transformaciones en formato PDF. Utilizando el paquete `tf2_tools`.
+Imagen referencial:
+![Imagen referncial](assets/image.png)
+**Hint:** Mira la documentación en https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html#using-view-frames
 
-12. Presenta la posicion en XY uilizando plotjuggler.
-    1. En una nueva terminal, instala el paquete `plotjuggler` con el siguiente comando, si aun no lo tienes instalado:
+12. Muestra el diagrama de la posición en XY utilizando plotjuggler.
+    1. En una nueva terminal, instala el paquete `plotjuggler` con el siguiente comando, si aún no lo tienes instalado:
     ``` 
     sudo apt install ros-$ROS_DISTRO-plotjuggler-ros
     ```
-    2. Lanza plotjuggler y subscribete al topic.
+    2. Lanza plotjuggler y suscríbete al topic.
+    ```
+    ros2 run plotjuggler plotjuggler
+    ```
+    3. Suscríbete al topic `/tf` y diagrama en XY las siguientes variables.  
+    **Hint:** Revisa la sección **Combine two timeseries in a "XY plot"** en el tutorial: https://slides.com/davidefaconti/introduction-to-plotjuggler#/8
+    ```
+    /tf/map/base_link/translation/x
+    /tf/map/base_link/translation/y
+    ```
+
+    4. Resultado esperado:
+    ![Color corregido](assets/2026-06-01_21-29.png)
+
+13. Comparte tu pantalla mostrando tu robot moviéndose:
+![Entregable](<assets/Peek 2025-05-17 00-00.gif>)
