@@ -1,0 +1,13 @@
+<launch>
+     <let name="urdf_path" value="$(find-pkg-share jackal_description)/urdf/jackal.urdf"/>
+
+     <let name="rviz_path" value="$(find-pkg-share jackal_description)/rviz/jackal.rviz"/>
+
+     <node pkg="robot_state_publisher" exec="robot_state_publisher">
+          <param name="robot_description" value="$(command 'xacro $(var urdf_path)')"/>
+     </node>
+
+     <!-- Insert your code here -->
+
+     <node pkg="rviz2" exec="rviz2" args="-d $(var rviz_path)"/>
+</launch>
