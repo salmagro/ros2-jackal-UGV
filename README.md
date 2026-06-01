@@ -2,14 +2,14 @@
 
 Instrucciones a seguir para el proyecto final.
 
-## Compilación del workspace ros2-jackal-ugv
+## Compilación del workspace ros2-jackal-UGV
 
-1. Clona el repositorio `ros2-jackal-ugv` en el directorio fuente (`src`) de tu `ros2 workspace`.
+1. Clona el repositorio `ros2-jackal-UGV` en el directorio fuente (`src`) de tu `ros2 workspace`.
 
 
 2. Tu directorio tendrá la siguiente estructura.
     ```shell
-    ~/your-ros2-workspace/src/ros2-jackal-ugv$ tree -L 2
+    ~/your-ros2-workspace/src/ros2-jackal-UGV$ tree -L 2
     .
     ├── jackal_description
     │   ├── CMakeLists.txt
@@ -36,7 +36,7 @@ Instrucciones a seguir para el proyecto final.
 
 4. Compila los nuevos paquetes.
 
-    **Hint:** Puedes utilizar el siguiente argumento `--base-path src/ros2-jackal-ugv` junto con el comando de compilación.
+    **Hint:** Puedes utilizar el siguiente argumento `--base-path src/ros2-jackal-UGV` junto con el comando de compilación.
 
 5. Actualiza el entorno vía `set-ros`.
 
@@ -46,11 +46,11 @@ Instrucciones a seguir para el proyecto final.
 
     Puedes hacerlo en el archivo de lanzamiento en Python:
     ```
-    ~/your-ros2-workspace/src/ros2-jackal-ugv/jackal_description/launch/display.launch.py
+    ~/your-ros2-workspace/src/ros2-jackal-UGV/jackal_description/launch/display.launch.py
     ```
     o en el archivo en formato XML:
     ```
-    ~/your-ros2-workspace/src/ros2-jackal-ugv/jackal_description/launch/display.launch.xml
+    ~/your-ros2-workspace/src/ros2-jackal-UGV/jackal_description/launch/display.launch.xml
     ```
 
 ## Visualiza tu proyecto y modifica su color
@@ -66,7 +66,7 @@ Instrucciones a seguir para el proyecto final.
 
     Modifica el color en el archivo:
     ```
-    ros2-jackal-ugv/jackal_description/urdf/jackal.urdf
+    ros2-jackal-UGV/jackal_description/urdf/jackal.urdf
     ```
     para que se asemeje al modelo oficial del fabricante.
 
